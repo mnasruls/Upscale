@@ -26,4 +26,5 @@ func main() {
 	for _, num := range numbers {
 		fmt.Print(num, " ")
 	}
+	fmt.Println()
 }

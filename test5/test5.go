@@ -47,6 +47,24 @@ func convertTime(time12 string) (string, error) {
 
 	hourStr := timeParts[0]
 
+	minute, err := strconv.Atoi(timeParts[1])
+	if err != nil {
+		return "", errors.New("Invalid input format")
+	}
+
+	if minute >= 60 || minute < 0 {
+		return "", errors.New("Invalid input format")
+	}
+
+	second, err := strconv.Atoi(timeParts[2])
+	if err != nil {
+		return "", errors.New("Invalid input format")
+	}
+
+	if second >= 60 || second < 0 {
+		return "", errors.New("Invalid input format")
+	}
+
 	minuteStr := timeParts[1] + ":" + timeParts[2]
 
 	hour, err := convertHour(hourStr, meridiem)
