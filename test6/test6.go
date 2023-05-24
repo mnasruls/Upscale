@@ -36,15 +36,16 @@ func FizzBuzz() {
 	for i := 1; i <= input; i++ {
 		switch {
 		case i%3 == 0 && i%5 == 0:
-			log.Println("FizzBuzz")
+			fmt.Print("FizzBuzz ")
 		case i%3 == 0:
-			log.Println("Fizz")
+			fmt.Print("Fizz ")
 		case i%5 == 0:
-			log.Println("Buzz")
+			fmt.Print("Buzz ")
 		default:
-			log.Println(i)
+			fmt.Print(i, " ")
 		}
 	}
+	fmt.Println()
 }
 
 // bagian 2
@@ -85,7 +86,7 @@ func Factorial() {
 	log.Println("Faktorial dari", num, "adalah", result)
 }
 
-// bagian 5
+// bagian 4
 func BiggestSmallest() {
 	var inputSInt string
 	log.Print("Masukkan angka - angka (gunakan spasi untuk memisahkan urutan bilangan) : ")
@@ -113,7 +114,7 @@ func BiggestSmallest() {
 	log.Println("Bilangan terkecil adalah : ", arrInt[0])
 }
 
-// bagian 6
+// bagian 5
 func LettersAndDigits() {
 	var inputText string
 	var letters, digits, elses int
